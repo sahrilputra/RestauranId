@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
-    sw: path.resolve(__dirname, 'src/scripts/sw.js'),
+    // sw: path.resolve(__dirname, 'src/scripts/sw.js'),
   },
   output: {
     filename: '[name].bundle.js',
@@ -15,7 +15,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.s[ac]ss$/i,
         use: [
           {
             loader: 'style-loader',
@@ -23,6 +23,9 @@ module.exports = {
           {
             loader: 'css-loader',
           },
+          {
+            loader: 'sass-loader',
+          }
         ],
       },
     ],
