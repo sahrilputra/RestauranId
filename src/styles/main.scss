@@ -10,8 +10,12 @@ img {
 }
 header{
   width: 100%;
-  min-height: 55px;
-  background-color: $dark-color;
+  height:450px;
+  background-image: url(../public/images/heros/hero-image_1.jpg);
+  img{
+    width: 40px;
+    height: 40px;
+  }
   .container{
     max-width: 95%;
         margin:0 auto;
@@ -49,10 +53,4 @@ header{
     color: #ffff;
   }
   
-}
-
-.heroContainer{
-  width: 100%;
-  background-image: url(../public/images/heros/hero-image_4.jpg);
-  min-height: 620px;
 }
