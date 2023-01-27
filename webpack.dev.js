@@ -6,6 +6,7 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
+    watchFiles: ["src/**/*"],
     static: path.resolve(__dirname, 'dist'),
     open: true,
     port: 9000,
