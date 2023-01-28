@@ -8,9 +8,14 @@
     flex-direction: column;
     background-size: cover;
     background-repeat: no-repeat;
-    h1, p{
-        color: white;
-        margin: 1rem;
+    box-shadow: -2px -23px 127px 50px rgba(0,0,0,0.75) inset;
+    -webkit-box-shadow: -2px -23px 127px 50px rgba(0,0,0,0.75) inset;
+    -moz-box-shadow: -2px -23px 127px 50px rgba(0,0,0,0.75) inset;
+    &__content{
+        color: #fff;
+        justify-content: center;
+        width: 60%;
+        margin: auto;
     }
 }
 
