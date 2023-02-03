@@ -16,6 +16,14 @@
         justify-content: center;
         width: 60%;
         margin: auto;
+        background-color: rgba(0, 0, 0, 0.144);
+        padding: 10px;
+        h1{
+            color: #fff;
+        }
+        p{
+          color: #fff;
+        }
     }
 }
 
@@ -54,5 +62,17 @@
         }
     }h1{
         color: white;
+    }
+}
+.skipLink{
+    position: absolute;
+    color: #fff;
+    padding: 10px;
+    align-items: center;
+    background-color: #000;
+    margin: 12px;
+    top: -120px;
+    &:focus{
+        top:0;
     }
 }

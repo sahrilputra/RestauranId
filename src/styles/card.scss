@@ -1,0 +1,28 @@
+.dataAppend{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    overflow: hidden;
+    justify-items: center;
+}
+.card{
+    text-align: center;
+    width: 230px;
+    height: 220px;
+    img{
+        width: 100%;
+        height: 220px;
+    }
+    &__title{
+        color: black;
+        font-weight: 900;
+    }
+}
