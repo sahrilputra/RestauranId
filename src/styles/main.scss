@@ -3,6 +3,7 @@
 $dark-color: #2d2d2d;
 $grey-color : #dedede;
 $background-color: #F5F6F8;
+$text-color: #AAAAAA;
 
 *{
   padding: 0;
@@ -13,6 +14,7 @@ $background-color: #F5F6F8;
 }
 html{
   scroll-behavior: smooth;
+  background-color: $background-color;
 }
 
 body{
@@ -42,6 +44,11 @@ main{
     margin-top: 1rem;
     font-size: 30px;
   }
+  p{
+    color: $text-color;
+    font-size: 18px;
+    font-weight: 400;
+  }
 }
 .res__img{
   width: 120px;
@@ -49,8 +56,33 @@ main{
   height: 120px;
 }
 
-@media (max-width:430px) {
-  .nav__list{
-    display: none;
+@media (max-width:665px) {
+  nav{
+    text-decoration: none;
+    color: #fff;
+    background-color: #2d2d2d;
+    height: 100vh;
+    width: 320px;
+    &__list{
+      padding: 20px;
+      margin: 20px;
+      line-break: 1px;
+      gap: 10px;
+    }
+    a{
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  // .nav__list{
+  //   display: none;
+  // }
+  .nav__logo{
+    font-size: 20px;
+  }
+  .dataAppend{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
   }
 }

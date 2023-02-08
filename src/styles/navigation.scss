@@ -18,7 +18,10 @@
         margin: auto;
         background-color: rgba(0, 0, 0, 0.144);
         padding: 10px;
+        
         h1{
+          
+            font-size: 30px;
             color: #fff;
         }
         p{
@@ -62,6 +65,23 @@
         }
     }h1{
         color: white;
+    }
+}
+#hamburger{
+    font-size: 26px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 700;
+    box-sizing: 20px;
+    position: absolute;
+    align-items: center;
+    margin: 12px;
+    top: -4px;
+    display:none;
+    transition: transform 0.3s ease-in-out;
+    &:hover{
+        color: #dddd;
     }
 }
 .skipLink{

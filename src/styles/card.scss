@@ -1,28 +1,71 @@
-.dataAppend{
-    width: 100%;
-    height: 100vh;
+
+$dark-color: #2d2d2d;
+$grey-color : #dedede;
+$background-color: #F5F6F8;
+$text-color: #AAAAAA;
+$title-color: #121212;
+
+.dataAppend {
+    margin: auto;
+    width: 80%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
-    margin: 20px;
-    padding: 20px;
-    overflow: hidden;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
     align-items: center;
-    justify-content: space-around;
-    gap: 10px;
-    overflow: hidden;
+    justify-content: center;
     justify-items: center;
+    margin-top: 10px;
 }
-.card{
-    text-align: center;
-    width: 230px;
-    height: 220px;
+
+.card {
+    height: max-content;
+    margin: 10px;
+    border-radius: 20px 20px 0 0;
+    background-color: #fff;
+
     img{
         width: 100%;
-        height: 220px;
+        border-radius: 20px 20px 0 0;
     }
     &__title{
-        color: black;
-        font-weight: 900;
+        color: $title-color;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    &__paraf{
+        p{
+            padding: 18px;
+            color: $text-color;
+            font-weight: 400;
+            font-size: 12px;
+        }
+
     }
 }
+
+@media (max-width:756) {
+    .dataAppend{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: auto;
+    }
+    .nav__logo{
+        font-size: 10px;
+    }
+  }
+@media (max-width:665px) {
+    .dataAppend{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+    }
+  }
+  
+@media (max-width:480px) {
+    .dataAppend{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-rows: auto;
+    }
+  }

@@ -1,6 +1,6 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.scss';
-import '../styles/navigation.scss';
+// import '../styles/navigation.scss';
 import '../styles/card.scss'
 import DATA from '../DATA.json';
 console.log(DATA)
