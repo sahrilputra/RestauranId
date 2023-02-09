@@ -1,29 +1,34 @@
 import 'regenerator-runtime'; /* for async await transpile */
-import '../styles/main.scss';
-// import '../styles/navigation.scss';
+
+// Css
 import '../styles/card.scss'
+import '../styles/navigation.scss';
+import '../styles/main.scss';
+
+//data 
 import DATA from '../DATA.json';
+
+document.querySelector('#hamburger').addEventListener('click', ()=>{
+  document.querySelector('#drawer').classList.toggle('navTogle');
+})
 console.log(DATA)
 const getData=(data)=>{
     let cardHtml = '';
     data.restaurants.forEach((resto, i) =>{
         cardHtml += `
-      <div tabindex="0" class="card">
-      <div class="card__container"> 
-        <div class="card__imgCont">
-          <img tabindex="0" class="card__img" alt="${resto.name}" src="${resto.pictureId}"/>
-          <span tabindex="0" class="card__rating">
-            <i title="ratings" class="fa fa-star"></i>
-            <span>${resto.rating}</span>
-          </span>
+        <div tabindex="0" class="card">
+        <div class="card__img">
+          <img tabindex="0"src="${resto.pictureId}" alt="${resto.name}">
+          <span class="card__rating"  tabindex="0">${resto.rating} </span>
         </div>
-
-        <div tabindex="0" class="card__content">
-          <p class="card__title">${resto.name} - ${resto.city}</p>
-          <p class="card__descr">${resto.description}</p>
-        </div>
+        <div class="card__text"  tabindex="0">
+          <p class="card__title" >${resto.name} - ${resto.city}</p>
+            <div class="card__paraf">
+              <p>${resto.description}</p>
+            </div>
         </div>
       </div>
+        
       `;
     })
     
@@ -39,5 +44,4 @@ const navControl = () => {
       }
 }
 window.onscroll = function() {navControl()};
-
-// getData(DATA);
+getData(DATA);

@@ -56,9 +56,12 @@
         padding: 10px;
         display: inline-block;
         gap: 10px;
+        line-height: 22px;
+       
         a{
             text-decoration: none;
             color: white;
+            padding: 10px;
         }
         :hover{
             color: yellow;
@@ -67,23 +70,7 @@
         color: white;
     }
 }
-#hamburger{
-    font-size: 26px;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    font-weight: 700;
-    box-sizing: 20px;
-    position: absolute;
-    align-items: center;
-    margin: 12px;
-    top: -4px;
-    display:none;
-    transition: transform 0.3s ease-in-out;
-    &:hover{
-        color: #dddd;
-    }
-}
+
 .skipLink{
     position: absolute;
     color: #fff;
