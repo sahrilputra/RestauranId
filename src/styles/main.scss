@@ -37,7 +37,7 @@ p,h1,h2,h3,h4,h5,h6{
 
 main{
   width: 100%;
-  height: 100vh;
+  height: max-content;
   text-align: center;
   h1{
     font-weight: 700;
@@ -50,11 +50,32 @@ main{
     font-weight: 400;
   }
 }
+
+footer {
+  width: 100%;
+  height: 90px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  text-align: center;
+  justify-items: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  
+ p{
+  font-size: 14px;
+ }:nth-last-child(1){
+  font-weight: 700;
+ }
+}
+
 .res__img{
   width: 120px;
   text-align: center;
   height: 120px;
 }
+
 #hamburger{
   font-size: 26px;
   color: #fff;
