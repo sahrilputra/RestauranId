@@ -8,8 +8,10 @@ import '../styles/main.scss';
 //data 
 import DATA from '../DATA.json';
 
-document.querySelector('#hamburger').addEventListener('click', ()=>{
+//navigasi
+document.querySelector('#hamburger').addEventListener('click', (e)=>{
   document.querySelector('#drawer').classList.toggle('navTogle');
+  e.stopPropagation();
 })
 console.log(DATA)
 const getData=(data)=>{

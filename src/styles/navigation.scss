@@ -52,16 +52,15 @@
         width: 80%;
         justify-items: center;
     }&__item{
-        background: black;
-        padding: 10px;
         display: inline-block;
-        gap: 10px;
-        line-height: 22px;
-       
+        background: #000;
+        line-height: 24px;
+        text-align: center;
+        padding: 12px;
         a{
             text-decoration: none;
             color: white;
-            padding: 10px;
+            padding: 14px;
         }
         :hover{
             color: yellow;
