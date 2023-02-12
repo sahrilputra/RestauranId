@@ -1,4 +1,7 @@
+import 'regenerator-runtime';
 import DrawerInitiator from '../utils/drawer-initiator';
+import routes from '../routes/routes';
+import UrlParse from '../routes/url-parser';
 
 class App {
   constructor({
@@ -23,6 +26,13 @@ class App {
     });
 
     // kita bisa menginisiasikan komponen lain bila ada
+  }
+
+  async renderPage() {
+    const url = UrlParse.parseActiveUrlWithCombiner();
+    const page = routes[url];
+    this._content.innerHtml = await page.render();
+    await page.afterRender();
   }
 }
 

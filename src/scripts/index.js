@@ -21,6 +21,10 @@ const app = new App({
 window.addEventListener('hashchange', () => {
   app.renderPage();
 });
+
+window.addEventListener('load', () => {
+  app.renderPage();
+});
 // const getData = (data) => {
 //   let cardHtml = '';
 //   data.restaurants.forEach((resto, i) => {
