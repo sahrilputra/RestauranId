@@ -107,7 +107,7 @@ footer {
     .nav__list{
       display: none;
     }
-    .navTogle{
+    .open{
       position: absolute;
       top: 70px;
       display: flex;
@@ -117,6 +117,9 @@ footer {
     }
     #hamburger{
       display: inline-block;
+      cursor: pointer;
+      z-index: 1;
+      position: fixed;
     }
   }
 @media (max-width:665px) {
