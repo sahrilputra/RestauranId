@@ -15,7 +15,9 @@ const app = new App({
   button: document.querySelector('#hamburger'),
   drawer: document.querySelector('#drawer'),
   content: document.querySelector('#mainContent'),
+  navbar: document.querySelector('#navbar'),
 });
+
 window.addEventListener('hashchange', () => {
   app.renderPage();
 });
@@ -41,14 +43,14 @@ window.addEventListener('hashchange', () => {
 
 //   document.getElementById('card').innerHTML = cardHtml;
 // }
-// const navControl = () => {
-//   const navBar = document.querySelector('.container');
-//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     document.getElementById('navbar').style.background = "#0d0d0d";
-//   } else {
-//     document.getElementById("navbar").style.background = "none";
-//   }
-// }
-// window.onscroll = function () {
-//   navControl();
-// };
+const navControl = () => {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById('navbar').style.background = '#0d0d0d';
+  } else {
+    document.getElementById('navbar').style.background = 'none';
+  }
+};
+
+window.onscroll = () => {
+  navControl();
+};
