@@ -1,23 +1,23 @@
 import 'regenerator-runtime'; /* for async await transpile */
 
 // Css
-import '../styles/card.scss'
+import '../styles/card.scss';
 import '../styles/navigation.scss';
 import '../styles/main.scss';
 
-//data 
+// data
 import DATA from '../DATA.json';
 
-//navigasi
-document.querySelector('#hamburger').addEventListener('click', (e)=>{
+// navigasi
+document.querySelector('#hamburger').addEventListener('click', (e) => {
   document.querySelector('#drawer').classList.toggle('navTogle');
   e.stopPropagation();
-})
-console.log(DATA)
-const getData=(data)=>{
-    let cardHtml = '';
-    data.restaurants.forEach((resto, i) =>{
-        cardHtml += `
+});
+
+const getData = (data) => {
+  let cardHtml = '';
+  data.restaurants.forEach((resto, i) => {
+    cardHtml += `
         <div tabindex="0" class="card">
         <div class="card__img">
           <img tabindex="0"src="${resto.pictureId}" alt="${resto.name}">
@@ -32,18 +32,20 @@ const getData=(data)=>{
       </div>
         
       `;
-    })
-    
+  })
 
-    document.getElementById('card').innerHTML=cardHtml;
+
+  document.getElementById('card').innerHTML = cardHtml;
 }
 const navControl = () => {
-    const navBar = document.querySelector('.container');
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById('navbar').style.background = "#0d0d0d";
-      } else {
-        document.getElementById("navbar").style.background = "none";
-      }
+  const navBar = document.querySelector('.container');
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById('navbar').style.background = "#0d0d0d";
+  } else {
+    document.getElementById("navbar").style.background = "none";
+  }
 }
-window.onscroll = function() {navControl()};
+window.onscroll = function () {
+  navControl()
+};
 getData(DATA);
