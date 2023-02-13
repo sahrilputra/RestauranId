@@ -1,7 +1,7 @@
-import restaurant from '../views/pages/restaurant-list';
+import Home from '../views/pages/home';
 
 const routes = {
-  '/': restaurant,
+  '/': Home,
 };
 
 export default routes;
