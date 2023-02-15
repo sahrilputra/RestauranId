@@ -8,12 +8,11 @@ class App {
     button,
     drawer,
     content,
-    navbar,
   }) {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
-    this._navbar = navbar;
+
     this._initialAppShell();
   }
 
@@ -22,7 +21,6 @@ class App {
       button: this._button,
       drawer: this._drawer,
       content: this._content,
-      navbar: this._navbar,
     });
 
     // kita bisa menginisiasikan komponen lain bila ada
@@ -31,7 +29,7 @@ class App {
   async renderPage() {
     const url = UrlParse.parseActiveUrlWithCombiner();
     const page = routes[url];
-    this._content.innerHtml = await page.render();
+    this._content.innerHTML = await page.render();
     await page.afterRender();
   }
 }

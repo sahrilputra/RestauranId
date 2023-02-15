@@ -1,18 +1,21 @@
 import CONFIG from '../../global/config';
 
 const createRestoDetailTemplate = (resto) => `
-  <h2 class="movie__title">${resto.name}</h2>
-  <img class="movie__poster" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}" />
-  <div class="movie__info">
+  <div class="detail">
+  <h1 class="detail__page">Restaurant Details</h1>
+  <h2 class="detail__title">${resto.name} - ${resto.city}</h2>
+  <img class="detail__poster" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}" />
+  <div class="detail__info">
   <h3>Information</h3>
     <h4>Tagline</h4>
     <p>${resto.city}</p>
     <h4>Rating</h4>
     <p>${resto.rating}</p>
   </div>
-  <div class="movie__overview">
+  <div class="detail__overview">
     <h3>Overview</h3>
     <p>${resto.description}</p>
+  </div>
   </div>
 `;
 const createRestoListTemplate = (resto) => `

@@ -5,13 +5,8 @@ import { createRestoDetailTemplate } from '../templates/template-creator';
 const Detail = {
   async render() {
     return `
-    <article>
-    <h1 class="headingMain">Restaurant Details</h1>
-    <p class="headingText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, blanditiis?</p>
-    <article id="mainContent">
-      <div class="dataAppend" id="card">
-      </div>
-    </article>
+    <h1 class="headingMain">Restaurant Details</h1>  
+    <article id="detail"></article>
     `;
   },
 
@@ -20,8 +15,8 @@ const Detail = {
     const url = UrlParse.parseActiveUrlWithoutCombiner();
     const resto = await RestaurantDbSource.detailRestaurant(url.id);
     console.log(resto);
-    const restoContainer = document.querySelector('.dataAppend');
-    restoContainer.innerHTML += createRestoDetailTemplate(resto.restaurant);
+    const restoContainer = document.querySelector('#detail');
+    restoContainer.innerHTML = createRestoDetailTemplate(resto.restaurant);
   },
 
 };
