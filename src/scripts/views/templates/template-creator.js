@@ -15,7 +15,28 @@ const createRestoDetailTemplate = (resto) => `
     </div>
     </div>
   </div>
+
 <br>
+<h2 class="headingMain">Menu's</h2>
+  <div class="menu">
+  <div class="menu__food">
+  <h3>Food's</h3>
+  ${resto.menus.foods.map((food, i) => `
+  <p class="menu__list">${i + 1}. ${food.name}</p>
+  `).join('')}
+    </div>
+
+    <div class="menu__drink">
+    <h3>Drink's</h3>
+  ${resto.menus.drinks.map(
+    (drinks, i) => `
+  <p class="menu__list">${i + 1}. ${drinks.name}</p>
+  `,
+  )
+    .join('')}
+    </div>  
+  </div>
+
 <h2 class="headingMain">Review</h2>
 <div class="detail__reviewContainer">
   ${resto.customerReviews.map((review) => `
@@ -28,8 +49,11 @@ const createRestoDetailTemplate = (resto) => `
   <p>${review.review}</p>
   </div>
   </div>
-  `)}
+  `).join('')}
   </div>
+
+  
+
   </div>
 `;
 const createRestoListTemplate = (resto) => `

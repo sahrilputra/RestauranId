@@ -1,10 +1,11 @@
-.detail_container{
+.detail_container {
   margin: 20px;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.detail{
+
+.detail {
   width: 80%;
   padding: 10px;
   margin: 3px;
@@ -14,50 +15,67 @@
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: auto;
   justify-content: space-evenly;
-  &__imgContainer{
+
+  &__imgContainer {
     width: 100%;
     text-align: center;
     justify-items: center;
     margin: auto;
     margin-top: auto;
-  }&__poster{
+  }
+
+  &__poster {
     width: 100%;
-  }&__info{
+  }
+
+  &__info {
     padding: 10px;
     margin: 10px;
-  }&__location{
+  }
+
+  &__location {
     color: #2d2d2d;
-  }&__rating{
+  }
+
+  &__rating {
     color: #2d2d2d;
     font-weight: 500;
-  }&__overview{
+  }
+
+  &__overview {
     color: rgb(0 0 0 / 73%);
     font-size: 14px;
     font-weight: 400;
     margin-top: 10px;
     padding: 6px;
-  }&__category{
+  }
+
+  &__category {
     color: #2d2d2d;
     font-size: 14px;
     text-align: right;
-    margin: 12px ;
+    margin: 12px;
     padding: 8px;
   }
 }
-.detail__review{
+
+.detail__review {
   border-bottom: solid 1px #dedede;
   display: flex;
   flex-direction: row;
   align-items: center;
   text-align: left;
 }
-.detail__name{
+
+.detail__name {
   width: 120px;
 }
-.detail__rName{
+
+.detail__rName {
   width: 120px;
 }
-.detail__reviewContainer{
+
+.detail__reviewContainer {
   width: 40%;
   text-align: center;
   padding: 10px;
@@ -65,16 +83,37 @@
   position: relative;
   left: 100px;
 }
-.detail__time{
+
+.detail__time {
   font-size: 10px;
   color: #2d2d2d;
 }
-.review__container{
+
+.review__container {
   padding: 10px;
   margin: 10px;
-  p{
+
+  p {
     font-size: 14px;
     color: #2d2d2d;
   }
-  
+
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 0.2fr 0.2fr;
+  align-items: start;
+  align-content: space-evenly;
+  justify-items: center;
+  justify-content: center;
+  &__list {
+    padding: 6px;
+    margin: 2px;
+    margin-top: 4px;
+    font-size: 14px;
+    color: #2d2d2d;
+    text-align: left;
+    border-bottom: solid 1px #dedede;
+  }
 }

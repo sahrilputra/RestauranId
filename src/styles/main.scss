@@ -136,6 +136,10 @@ footer {
   }
 @media (max-width:665px) {
   
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
   #mainContent{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
