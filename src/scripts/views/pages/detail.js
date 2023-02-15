@@ -6,7 +6,7 @@ const Detail = {
   async render() {
     return `
     <h1 class="headingMain">Restaurant Details</h1>  
-    <article id="detail"></article>
+    <article class="detail_container"></article>
     `;
   },
 
@@ -15,7 +15,7 @@ const Detail = {
     const url = UrlParse.parseActiveUrlWithoutCombiner();
     const resto = await RestaurantDbSource.detailRestaurant(url.id);
     console.log(resto);
-    const restoContainer = document.querySelector('#detail');
+    const restoContainer = document.querySelector('.detail_container');
     restoContainer.innerHTML = createRestoDetailTemplate(resto.restaurant);
   },
 
