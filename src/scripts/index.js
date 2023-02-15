@@ -5,6 +5,7 @@ import '../styles/card.scss';
 import '../styles/detail.scss';
 import '../styles/navigation.scss';
 import '../styles/main.scss';
+import swRegister from './utils/sw-register';
 import App from './views/app';
 // navigasi
 // document.querySelector('#hamburger').addEventListener('click', (e) => {
@@ -36,4 +37,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });
