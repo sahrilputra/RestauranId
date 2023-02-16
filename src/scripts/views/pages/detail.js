@@ -1,7 +1,8 @@
 import RestaurantDbSource from '../../data/restaurant-source';
 import UrlParse from '../../routes/url-parser';
+import LikeButtonInitiator from '../../utils/like-button-intiator';
 
-import { createLikeButtonTemplate, createRestoDetailTemplate } from '../templates/template-creator';
+import { createRestoDetailTemplate } from '../templates/template-creator';
 
 const Detail = {
   async render() {
@@ -13,19 +14,26 @@ const Detail = {
   },
 
   async afterRender() {
-    // test
     const url = UrlParse.parseActiveUrlWithoutCombiner();
     const resto = await RestaurantDbSource.detailRestaurant(url.id);
+    const dataResto = resto.restaurant;
+
     const restoContainer = document.querySelector('.detail_container');
-    const likeButtonContainer = document.querySelector('#likeButtonContainer');
-    likeButtonContainer.innerHTML = createLikeButtonTemplate();
 
     restoContainer.innerHTML = createRestoDetailTemplate(resto.restaurant);
 
-    // LikeButtonInitiator.init({
-    //   likeButtonContainer: document.querySelector('#likeButtonContainer'),
-    //   resto,
-    // });
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      resto: {
+        id: dataResto.id,
+        name: dataResto.name,
+        city: dataResto.city,
+        rating: dataResto.rating,
+        address: dataResto.address,
+        pictureId: dataResto.pictureId,
+        description: dataResto.description,
+      },
+    });
   },
 
 };
