@@ -120,6 +120,12 @@ footer {
   color: white;
   cursor: pointer;
 }
+.without{
+  font-weight: 200;
+}
+.with{
+  font-weight: 900;
+}
 
 //responsive
 @media (max-width:830px) {
