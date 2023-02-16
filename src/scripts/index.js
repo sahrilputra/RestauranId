@@ -7,11 +7,16 @@ import '../styles/navigation.scss';
 import '../styles/main.scss';
 import swRegister from './utils/sw-register';
 import App from './views/app';
+
+// custom components
+import './components/navbar';
+import './components/footer';
+
 // navigasi
-// document.querySelector('#hamburger').addEventListener('click', (e) => {
-//   document.querySelector('#drawer').classList.toggle('navTogle');
-//   e.stopPropagation();
-// });
+document.querySelector('#hamburger').addEventListener('click', (e) => {
+  document.querySelector('#drawer').classList.toggle('navTogle');
+  e.stopPropagation();
+});
 
 const app = new App({
   button: document.querySelector('#hamburger'),

@@ -80,7 +80,7 @@ footer {
   height: 120px;
 }
 
-#hamburger{
+#hamburgerBtn{
   z-index: 99 !important;
   font-size: 26px;
   color: #fff;
@@ -92,9 +92,11 @@ footer {
   align-items: center;
   margin-top: 6px;
   top: -4px;
-  right: 10px;
+  right: 50px;
   display: none;
+  background-color: #000;
   transition: transform 0.3s ease-in-out;
+  border: none;
   &:hover{
       color: #dddd;
   }
@@ -155,7 +157,7 @@ footer {
       flex-direction: column;
       text-align: center;
     }
-    #hamburger{
+    #hamburgerBtn{
       display: inline-block;
       cursor: pointer;
       z-index: 1;
