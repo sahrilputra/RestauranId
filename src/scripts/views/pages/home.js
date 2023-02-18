@@ -7,7 +7,7 @@ const Home = {
   async render() {
     return `
   <div class="HomeContainer">
-    <div id="loading"> <p>loader</p>
+    <div id="loading">
     </div>
     <div id="containerMain">
     <h1 class="headingMain">Restaurant List</h1>
