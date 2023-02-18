@@ -75,7 +75,7 @@ const createRestoListTemplate = (resto) => `
 
 const createLikeButtonTemplate = () => `
   <button aria-label="like this resto" id="likeButton" class="like">
-  <i class="fas fa-heart without" aria-hidden="true"></i>
+  <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
 

@@ -129,6 +129,13 @@ footer {
   font-weight: 900;
 }
 
+//loader
+
+#loading{
+  height: 800px;
+  width: 900px;
+}
+
 //responsive
 @media (max-width:830px) {
   .detail__reviewContainer{

@@ -1,21 +1,24 @@
 import 'regenerator-runtime'; /* for async await transpile */
 
 // Css
+import '../styles/loader.scss';
 import '../styles/card.scss';
 import '../styles/detail.scss';
 import '../styles/navigation.scss';
 import '../styles/main.scss';
+import NavControl from './utils/nav-control';
 import swRegister from './utils/sw-register';
 import App from './views/app';
 
 // custom components
 import './components/navbar';
+import './components/heroSection';
 import './components/footer';
 
-// navigasi
-document.querySelector('#hamburger').addEventListener('click', (e) => {
-  document.querySelector('#drawer').classList.toggle('navTogle');
-  e.stopPropagation();
+const skipLinkElem = document.querySelector('.skipLink');
+skipLinkElem.addEventListener('click', (event) => {
+  event.preventDefault();
+  document.querySelector('#main_content').focus();
 });
 
 const app = new App({
@@ -24,16 +27,8 @@ const app = new App({
   content: document.querySelector('#main_content'),
 });
 
-const navControl = () => {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById('navbar').style.background = '#0d0d0d';
-  } else {
-    document.getElementById('navbar').style.background = 'none';
-  }
-};
-
 window.onscroll = () => {
-  navControl();
+  NavControl();
 };
 
 window.addEventListener('hashchange', () => {
