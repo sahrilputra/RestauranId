@@ -13,6 +13,20 @@ const Detail = {
     <div id="containerMain">
     <h1 class="headingMain">Restaurant Details</h1>  
     <article class="detail_container"></article>
+    <h3 class="headingMain">Give new review</h3>
+    <div id="formInput">
+    <section>
+  <div class="input">
+  <form action="#">
+    <p for="name">Name</p>
+    <input class="input__name" id="name" type="text" placeholder="Name" tabindex="0" aria-label="name" maxlength="12" ><br>
+    <p for="description">Description</p>
+    <textarea name="review" id="input__review" cols="30" rows="25" aria-label="description" placeholder="Review.."></textarea><br>
+    <button type="submit" aria-label="submit">Submit</button>
+  </form>
+  </div>
+</section>
+    </div>
     <div id="likeButtonContainer"></div>
     </div>
     `;

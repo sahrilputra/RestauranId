@@ -29,11 +29,15 @@ class App {
   async renderPage() {
     const url = UrlParse.parseActiveUrlWithCombiner();
     const page = routes[url];
+
     try {
       this._content.innerHTML = await page.render();
       await page.afterRender();
     } catch (err) {
-      throw new Error(err);
+      this._content.innerHTML = `<h2>Cannot access the web, please see your connection</h2>
+      <p>Error: ${err.message}</p>
+      `;
+      console.log(err.message);
     }
   }
 }

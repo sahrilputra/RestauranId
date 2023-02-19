@@ -117,3 +117,35 @@
     border-bottom: solid 1px #dedede;
   }
 }
+
+.input{
+  display: block;
+  margin-left: 20px;
+  padding: 8px;
+  input{
+    border-radius: 6px;
+    border: 2px solid #000;
+    padding: 8px;
+  }
+  textarea{
+    width: 320px;
+    outline: none;
+    -webkit-appearance: none;
+    height: 59px;
+    border-radius: 6px;
+    padding: 10px;
+  }
+  button{
+    outline: none;
+    margin-left: 10px;
+    padding: 4px;
+    min-height: 24px;
+    max-height: max-content;
+    min-width: 24px;
+    max-width: max-content;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+  }
+
+}
