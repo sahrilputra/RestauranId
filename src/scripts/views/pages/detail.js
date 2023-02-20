@@ -1,9 +1,11 @@
+import 'regenerator-runtime';
 import RestaurantDbSource from '../../data/restaurant-source';
 import UrlParse from '../../routes/url-parser';
 import LikeButtonInitiator from '../../utils/like-button-intiator';
 
 import { createRestoDetailTemplate } from '../templates/template-creator';
 import Loader from './loaders';
+import newReview from '../../utils/inputForm';
 
 const Detail = {
   async render() {
@@ -22,7 +24,7 @@ const Detail = {
     <input class="input__name" id="name" type="text" placeholder="Name" tabindex="0" aria-label="name" maxlength="12" ><br>
     <p for="description">Description</p>
     <textarea name="review" id="input__review" cols="30" rows="25" aria-label="description" placeholder="Review.."></textarea><br>
-    <button type="submit" aria-label="submit">Submit</button>
+    <button type="submit" aria-label="submit" id="input__submit">Submit</button>
   </form>
   </div>
 </section>
@@ -63,6 +65,21 @@ const Detail = {
 
       loader.style.display = 'none';
       mainContainer.style.display = 'block';
+
+      // form control
+      const submitBtnNewReview = document.querySelector('#input__submit');
+      const nameReview = document.querySelector('.input__name');
+      const descriptionReview = document.querySelector('#input__review');
+
+      submitBtnNewReview.addEventListener('click', async (e) => {
+        e.preventDefault();
+
+        await newReview(url, nameReview.value, descriptionReview.value);
+        console.log(nameReview.value);
+        console.log(descriptionReview.value);
+        // nameReview.value = '';
+        // descriptionReview.value = '';
+      });
     } catch (err) {
       loader.style.display = 'none';
       mainContainer.style.display = 'block';

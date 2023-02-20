@@ -1,3 +1,5 @@
+import RestaurantDbSource from '../data/restaurant-source';
+
 const newReview = async (url, name, review) => {
   const dataInput = {
     id: url.id,
@@ -5,30 +7,28 @@ const newReview = async (url, name, review) => {
     review,
   };
 
-  const reviewContent = document.querySelector('.');
+  const reviewContent = document.querySelector('.detail__reviewContainer');
   const date = new Date().toLocaleDateString('id-ID', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
   });
 
-  const newReview = `
-  <div class="detail-review-item">
-  <div class="review-header">
-  <p class="review-name">${name}</p>
-
-  <p class="review-date">${date}</p>
+  const displayReview = `
+  <div class="detail__review">
+  <div class="detail__name">
+  <h3 class="detail__rName">${name}</h3> 
+  <p class="detail__time">${date}</p>
   </div>
-
-  <div class="review-body">
-  ${review}
+  <div class="review__container">
+  <p>${review}</p>
   </div>
   </div>
   `;
 
-  const responseInput = await Res(dataInput);
-
-  reviewContent.innerHTML += newReview;
+  const responseInput = await RestaurantDbSource.postNewReview(dataInput);
+  console.log(responseInput);
+  reviewContent.innerHTML += displayReview;
 };
 
 export default newReview;
