@@ -48,7 +48,7 @@ describe('Liking a Resto', () => {
     FavoriteRestoIdb.deleteResto(1);
   });
 
-  xit('Should not add a resto when it has no id', async () => {
+  it('Should not add a resto when it has no id', async () => {
     await createLikeButtonPresenterWithRestaurant({});
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
 
