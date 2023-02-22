@@ -73,7 +73,7 @@ const createRestoListTemplate = (resto) => `
   </div>
 `;
 
-const createLikeButtonTemplate = () => `
+const createUnlikeMovieButtonTemplate = () => `
   <button aria-label="like this resto" id="likeButton" class="like">
   <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
@@ -103,6 +103,6 @@ export {
   createRestoListTemplate,
   createRestoDetailTemplate,
   createLikedButtonTemplate,
-  createLikeButtonTemplate,
+  createUnlikeMovieButtonTemplate,
   createInputForm,
 };

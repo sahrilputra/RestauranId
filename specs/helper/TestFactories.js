@@ -1,4 +1,4 @@
-import LikeButtonInitiator from '../../src/scripts/utils/like-button-intiator';
+import LikeButtonInitiator from '../../src/scripts/utils/like-button-presenter';
 
 const createLikeButtonPresenterWithRestaurant = async (resto) => {
   await LikeButtonInitiator.init({

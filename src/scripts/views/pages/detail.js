@@ -1,7 +1,7 @@
 import 'regenerator-runtime';
 import RestaurantDbSource from '../../data/restaurant-source';
 import UrlParse from '../../routes/url-parser';
-import LikeButtonInitiator from '../../utils/like-button-intiator';
+import LikeButtonInitiator from '../../utils/like-button-presenter';
 
 import { createRestoDetailTemplate } from '../templates/template-creator';
 import Loader from './loaders';
