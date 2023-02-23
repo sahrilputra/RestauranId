@@ -60,7 +60,11 @@ const createRestoListTemplate = (resto) => `
   <div tabindex="0" class="card">
   <a href="#/resto/${resto.id}" class="card-a-tag">
   <div class="card__img">
+  <picture>
+  <source type="image/jpeg" srcset="${CONFIG.BASE_IMAGE_URL + resto.pictureId}">
+  <source type="image/jpeg" srcset="${CONFIG.BASE_IMAGE_URL + resto.pictureId}">
   <img tabindex="0"src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}">
+  </picture>
   <span class="card__rating"  tabindex="0">${resto.rating} </span>
   </div>
   <div class="card__text"  tabindex="0">
