@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 
 import FavoriteRestoIdb from '../src/scripts/data/favorite-resto-idb';
-import { createLikeButtonPresenterWithRestaurant } from './helper/TestFactories';
+import * as TestFactories from './helper/TestFactories';
 
 const addLikeButtonContainer = () => {
   document.body.innerHTML = '<div id="likeButtonContainer"></div>';
@@ -18,7 +18,7 @@ describe('Unlike a resto', () => {
   });
 
   it('Should display unlike widget when the restaurant has been liked', async () => {
-    await createLikeButtonPresenterWithRestaurant({ id: 1 });
+    await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 });
 
     expect(
       document.querySelector('[aria-label="unlike this resto"]'),
@@ -26,15 +26,13 @@ describe('Unlike a resto', () => {
   });
 
   it('should not display like widget when the resto has been liked', async () => {
-    await createLikeButtonPresenterWithRestaurant({ id: 1 });
+    await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 });
 
-    document.querySelector('[aria-label="unlike this resto"]').dispatchEvent(new Event('click'));
-
-    expect(await FavoriteRestoIdb.getAllResto()).toEqual([]);
+    expect(document.querySelector('[aria-label="like this resto"]')).toBeFalsy();
   });
 
-  it('SHould not throw error if the unliked resto is not in the list', async () => {
-    await createLikeButtonPresenterWithRestaurant({ id: 1 });
+  it('Should not throw error if the unliked resto is not in the list', async () => {
+    await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 });
     await FavoriteRestoIdb.deleteResto(1);
 
     document.querySelector('[aria-label="unlike this resto"]').dispatchEvent(new Event('click'));

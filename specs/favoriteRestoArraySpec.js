@@ -7,6 +7,7 @@ import { itActsAsFavoriteRestoModel } from './contract/favoriteRestoContarct';
 let favoriteRestaurants = [];
 
 const FavoriteRestaurantArray = {
+
   getResto(id) {
     if (!id) {
       return;
@@ -24,7 +25,6 @@ const FavoriteRestaurantArray = {
       return;
     }
 
-    // pastikan id ini belum ada dalam daftar favoriteRestaurant
     if (this.getResto(restaurant.id)) {
       return;
     }
@@ -33,15 +33,12 @@ const FavoriteRestaurantArray = {
   },
 
   deleteResto(id) {
-    // cara boros menghapus restaurant dengan meng-copy restaurant yang ada
-    // kecuali restaurant dengan id === id
     favoriteRestaurants = favoriteRestaurants.filter((restaurant) => restaurant.id !== id);
   },
 };
 
 describe('Favorite Restaurant Array Contract Test Implementation', () => {
-  // eslint-disable-next-line no-return-assign
-  afterEach(() => (favoriteRestaurants = []));
+  afterEach(() => favoriteRestaurants = []);
 
   itActsAsFavoriteRestoModel(FavoriteRestaurantArray);
 });

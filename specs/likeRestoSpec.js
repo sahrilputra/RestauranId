@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 import FavoriteRestoIdb from '../src/scripts/data/favorite-resto-idb';
-import { createLikeButtonPresenterWithRestaurant } from './helper/TestFactories';
+// import { createLikeButtonPresenterWithRestaurant } from './helper/TestFactories';
+import * as TestFactories from './helper/TestFactories';
 
 const addLikeButtonContainer = () => {
   document.body.innerHTML = '<div id="likeButtonContainer"></div>';
@@ -12,16 +13,16 @@ beforeEach(() => {
 
 describe('Liking a Resto', () => {
   it('should show the like button when the resto has not been liked before', async () => {
-    await createLikeButtonPresenterWithRestaurant({ id: 1 });
+    await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 });
 
     expect(
       document.querySelector('[aria-label="like this resto"]'),
     ).toBeTruthy();
   });
 
-  it('should not show the unlike button when the movie has not been liked before', async () => {
+  it('should not show the unlike button when the resto has not been liked before', async () => {
     document.body.innerHTML = '<div id="likeButtonContainer"></div>';
-    await createLikeButtonPresenterWithRestaurant({ id: 1 });
+    await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 });
 
     expect(
       document.querySelector('[aria-label="unlike this resto"]'),
@@ -29,7 +30,7 @@ describe('Liking a Resto', () => {
   });
 
   it('Should be able to like the restaurant', async () => {
-    await createLikeButtonPresenterWithRestaurant({ id: 1 });
+    await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 });
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
 
     const restaurant = await FavoriteRestoIdb.getResto(1);
@@ -37,8 +38,8 @@ describe('Liking a Resto', () => {
     FavoriteRestoIdb.deleteResto(1);
   });
 
-  it('Should not add a resto again when its alrady liked', async () => {
-    await createLikeButtonPresenterWithRestaurant({ id: 1 });
+  it('Should not add a resto again when its already liked', async () => {
+    await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 });
     await FavoriteRestoIdb.putResto({ id: 1 });
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
@@ -49,7 +50,7 @@ describe('Liking a Resto', () => {
   });
 
   it('Should not add a resto when it has no id', async () => {
-    await createLikeButtonPresenterWithRestaurant({});
+    await TestFactories.createLikeButtonPresenterWithRestaurant({});
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
 
     expect(await FavoriteRestoIdb.getAllResto()).toEqual([]);
