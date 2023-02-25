@@ -58,7 +58,8 @@ const createRestoDetailTemplate = (resto) => `
 `;
 const createRestoListTemplate = (resto) => `
   <div tabindex="0" class="card">
-  <a class="card-a-tag" id="tagCard" href="#/resto/${resto.id}" class="card-a-tag">
+  <div class="tae">
+ 
   <div class="card__img">
   <picture>
   <source type="image/jpeg" srcset="${CONFIG.BASE_IMAGE_URL + resto.pictureId}">
@@ -68,12 +69,12 @@ const createRestoListTemplate = (resto) => `
   <span class="card__rating"  tabindex="0">${resto.rating} </span>
   </div>
   <div class="card__text"  tabindex="0">
-  <p class="card__title" >${resto.name} - ${resto.city}</p>
+  <p class="card__title" > <a href="#/resto/${resto.id}"> ${resto.name} - ${resto.city} </a></p>
   <div class="card__paraf">
     <p>${resto.description}</p>
   </div>
   </div>
-  </a>
+  </div>
   </div>
 `;
 
