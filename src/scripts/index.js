@@ -6,6 +6,8 @@ import '../styles/card.scss';
 import '../styles/detail.scss';
 import '../styles/navigation.scss';
 import '../styles/main.scss';
+
+// Utils
 import NavControl from './utils/nav-control';
 import swRegister from './utils/sw-register';
 import App from './views/app';
