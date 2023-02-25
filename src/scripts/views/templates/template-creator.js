@@ -58,7 +58,7 @@ const createRestoDetailTemplate = (resto) => `
 `;
 const createRestoListTemplate = (resto) => `
   <div tabindex="0" class="card">
-  <a href="#/resto/${resto.id}" class="card-a-tag">
+  <a class="card-a-tag" id="tagCard" href="#/resto/${resto.id}" class="card-a-tag">
   <div class="card__img">
   <picture>
   <source type="image/jpeg" srcset="${CONFIG.BASE_IMAGE_URL + resto.pictureId}">
