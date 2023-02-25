@@ -5,18 +5,24 @@ const FAVORITE = {
 
   async render() {
     return `
+    <div id="query">
     <h1 class="headingMain">Favorite Restaurant</h1>
-    <article id="mainContent" class="dataAppend">
+    <article id="fav-resto" class="dataAppend">
+    
     </article>
+    </div>
     `;
   },
 
   async afterRender() {
     const restaurant = await FavoriteRestoIdb.getAllResto();
-    const restoContainer = document.querySelector('#mainContent');
+    const restoContainer = document.querySelector('#fav-resto');
 
     if (restaurant.length === 0) {
-      restoContainer.innerHTML = '<h2>Favorite page\'s is empty</h2> ';
+      restoContainer.innerHTML = `
+      <div id="notFound"> 
+      <h1> Tidak ada restaurant untuk ditampilkan </h1> 
+      </div>`;
     }
     restaurant.forEach((resto) => {
       restoContainer.innerHTML += createRestoListTemplate(resto);

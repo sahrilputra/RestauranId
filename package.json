@@ -9,7 +9,8 @@
     "lint": "eslint ./src",
     "serve": "http-server dist",
     "test": "karma start",
-    "build-image": "node sharp.js"
+    "build-image": "node sharp.js",
+    "e2e": "codeceptjs run --steps"
   },
   "keywords": [],
   "author": "your_name <your.email@domain.com>",

@@ -31,6 +31,18 @@ $title-color: #121212;
     justify-items: center;
     margin-top: 10px;
 }
+#fav-resto{
+    margin: auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    align-items: stretch;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 10px;
+}
 
 .card {
     height: max-content;
