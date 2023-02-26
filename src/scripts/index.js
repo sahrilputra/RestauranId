@@ -12,6 +12,10 @@ import NavControl from './utils/nav-control';
 import swRegister from './utils/sw-register';
 import App from './views/app';
 
+// lazyLoader
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+
 // custom components
 import './components/navbar';
 import './components/heroSection';

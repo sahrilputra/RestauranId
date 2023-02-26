@@ -141,6 +141,7 @@ textarea{
 
 //responsive
 @media (max-width:830px) {
+
   .detail__reviewContainer{
     width: 80%;
     left: 0;
@@ -188,12 +189,18 @@ textarea{
   }
   
 @media (max-width:480px) {
+  .hero{
+    width: 100%;
+    background-size:cover;
+    background-position-x: -220px;
+    height: 100vh;
+  }
   .hero__content{
     h1{
-      font-size: 22px;
+      font-size: 32px;
     }
     p{
-      font-size: 14px;
+      font-size: 18px;
     }
   }
   .card__title{
@@ -202,4 +209,9 @@ textarea{
   .card__paraf{
     font-size: 12px;
   }
+  .input{
+    textarea{
+        width: 250px;
+    }
   }
+}
