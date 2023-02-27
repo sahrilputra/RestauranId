@@ -62,9 +62,9 @@ const createRestoListTemplate = (resto) => `
  
   <div class="card__img">
   <picture>
+  <source media="(max-width:680px)" type="image/jpeg" srcset="${CONFIG.BASE_IMAGE_URL + resto.pictureId}">
   <source type="image/jpeg" srcset="${CONFIG.BASE_IMAGE_URL + resto.pictureId}">
-  <source type="image/jpeg" srcset="${CONFIG.BASE_IMAGE_URL + resto.pictureId}">
-  <img class="lazyload" tabindex="0" data-src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}">
+  <img class="lazyload" tabindex="0" width="100%" height:"380px" data-src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}">
   </picture>
   <span class="card__rating"  tabindex="0">${resto.rating} </span>
   </div>

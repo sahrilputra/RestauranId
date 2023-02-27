@@ -19,11 +19,10 @@ Scenario('liking one Resto', async ({ I }) => {
 
   I.amOnPage('/');
   I.seeElement('#mainContent');
-  I.waitForElement('.card', 50);
+  I.waitForElement('.card', 30);
   I.seeElement('.card__title a');
   const firstRestoTitle = locate('.card__title a').first();
   const firstFilmCard = await I.grabTextFrom('.card__title');
-
   I.click(firstRestoTitle);
 
   I.waitForElement('.detail', 50);
