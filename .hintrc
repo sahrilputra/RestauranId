@@ -8,6 +8,7 @@
       {
         "list": "off"
       }
-    ]
+    ],
+    "apple-touch-icons": "off"
   }
 }

@@ -1,7 +1,7 @@
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
@@ -47,7 +47,6 @@ module.exports = {
         },
       }],
     }),
-    new CleanWebpackPlugin({}),
     new WorkboxWebpackPlugin.GenerateSW({
       swDest: './sw.bundle.js',
     }),
@@ -59,23 +58,20 @@ module.exports = {
       background_color: '#000',
       display: 'standalone',
       orientation: 'portrait',
-      description: 'Explore The Restaurant',
+      description: 'Explore The Restaurant Ini Manifest Terbaru',
       start_url: './index.html',
+      crossorigin: 'anonymous',
       maskable_icon: true,
       inject: true,
       fingerprints: false,
       ios: true,
       icons: [
         {
-          src: path.resolve(__dirname, 'src/public/app-logo.png'),
-          destination: path.join('assets', 'images', 'icons'),
+          src: path.resolve(__dirname, 'src/public/icons/icon.png'),
+          destination: path.join('images'),
           sizes: [96, 128, 192, 256, 384, 512],
+          purpose: 'any maskable',
           ios: true,
-        },
-        {
-          src: path.resolve(__dirname, 'src/public/app-logo.png'),
-          destination: path.join('icons'),
-          size: '1024x1024',
         },
       ],
     }),
