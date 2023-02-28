@@ -51,9 +51,7 @@ const createRestoDetailTemplate = (resto) => `
   </div>
   `).join('')}
   </div>
-
   
-
   </div>
 `;
 const createRestoListTemplate = (resto) => `
@@ -61,8 +59,8 @@ const createRestoListTemplate = (resto) => `
   <a href="#/resto/${resto.id}">
   <div class="card__img">
   <picture>
-  <source media="(max-width:680px)" type="image/jpeg" srcset="${CONFIG.BASE_IMAGE_URL + resto.pictureId}">
-  <source type="image/jpeg" srcset="${CONFIG.BASE_IMAGE_URL + resto.pictureId}">
+  <source media="(max-width:680px)" type="image/jpeg" data-srcset="${CONFIG.BASE_IMAGE_URL + resto.pictureId}">
+  <source type="image/jpeg" data-srcset="${CONFIG.BASE_IMAGE_URL + resto.pictureId}">
   <img class="lazyload" tabindex="0" width="100%" height:"380px" data-src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}">
   </picture>
   <span class="card__rating"  tabindex="0">${resto.rating} </span>

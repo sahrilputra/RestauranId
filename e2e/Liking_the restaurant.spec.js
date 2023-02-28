@@ -42,7 +42,7 @@ Scenario('Unlike the Restaurant', async ({ I }) => {
   I.see('Tidak ada restaurant untuk ditampilkan', '#notFound');
 
   I.amOnPage('/');
-  I.waitForElement('.card a');
+  I.waitForElement('.card', 30);
   I.seeElement('.card a');
 
   const firstResto = locate('.card a').first();

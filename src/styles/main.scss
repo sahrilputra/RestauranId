@@ -171,6 +171,11 @@ textarea {
 //responsive
 @media (max-width:830px) {
 
+  #fav-resto{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+  }
   .detail__reviewContainer {
     width: 80%;
     left: 0;
@@ -213,6 +218,11 @@ textarea {
 
 @media (max-width:665px) {
 
+  #fav-resto{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+  }
   .menu {
     display: grid;
     grid-template-columns: auto;
