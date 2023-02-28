@@ -58,8 +58,7 @@ const createRestoDetailTemplate = (resto) => `
 `;
 const createRestoListTemplate = (resto) => `
   <div tabindex="0" class="card">
-  <div class="tae">
- 
+  <a href="#/resto/${resto.id}">
   <div class="card__img">
   <picture>
   <source media="(max-width:680px)" type="image/jpeg" srcset="${CONFIG.BASE_IMAGE_URL + resto.pictureId}">
@@ -69,12 +68,12 @@ const createRestoListTemplate = (resto) => `
   <span class="card__rating"  tabindex="0">${resto.rating} </span>
   </div>
   <div class="card__text"  tabindex="0">
-  <p class="card__title" > <a href="#/resto/${resto.id}"> ${resto.name} - ${resto.city} </a></p>
+  <p class="card__title" >  ${resto.name} - ${resto.city} </p>
   <div class="card__paraf">
     <p>${resto.description}</p>
   </div>
   </div>
-  </div>
+  </a>
   </div>
 `;
 
@@ -93,7 +92,7 @@ const createLikedButtonTemplate = () => `
 const createInputForm = () => `
 <section>
 <div class="input">
-  <form action="#">
+  <form id="fromAction" action="#">
     <p for="name">Name</p>
     <input class="input__name" id="name" type="text" placeholder="Name" tabindex="0" aria-label="name" maxlength="12" ><br>
     <p for="description">Description</p>

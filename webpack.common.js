@@ -57,6 +57,7 @@ module.exports = {
           progressive: true,
         }),
       ],
+      overrideExtension: true,
     }),
     new CleanWebpackPlugin(),
   ],
