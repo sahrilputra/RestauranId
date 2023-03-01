@@ -170,12 +170,17 @@ textarea {
 
 //responsive
 @media (max-width:830px) {
+  .hero {
+    background-image: url(/image/hero-image_1-large.jpg);
+  }
 
-  #fav-resto{
+
+  #fav-resto {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
   }
+
   .detail__reviewContainer {
     width: 80%;
     left: 0;
@@ -218,11 +223,19 @@ textarea {
 
 @media (max-width:665px) {
 
-  #fav-resto{
+  .hero {
+    background-image: url('../public/images/hero-image_1.jpg');
+    background-image: -webkit-image-set(
+      url(../public/images/hero-image_1.jpg) 1x,
+      url(../public/images/hero-image_1.jpg) 2x,
+    );
+  }
+  #fav-resto {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: auto;
   }
+
   .menu {
     display: grid;
     grid-template-columns: auto;
@@ -239,6 +252,13 @@ textarea {
 }
 
 @media (max-width:480px) {
+  .hero {
+    background-image: url('../public/images/hero-image_1.jpg');
+    background-image: -webkit-image-set(
+      url(../public/images/hero-image_1.jpg) 3x,
+      url(../public/images/hero-image_1.jpg) 4x,
+    );
+  }
   .menu {
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: auto;
