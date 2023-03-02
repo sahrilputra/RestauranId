@@ -6,7 +6,7 @@ const target = path.resolve(__dirname, 'src/public/images');
 const destination = path.resolve(__dirname, 'dist/images');
 
 if (!fs.existsSync(destination)) {
-  fs.mkdirSync(destination);
+  fs.mkdirSync(destination, { recursive: true });
 }
 
 fs.readdirSync(target)

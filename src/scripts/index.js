@@ -28,7 +28,7 @@ skipLinkElem.addEventListener('click', (event) => {
 });
 
 const app = new App({
-  button: document.querySelector('#hamburger'),
+  button: document.querySelector('#hamburgerBtn'),
   drawer: document.querySelector('#drawer'),
   content: document.querySelector('#main_content'),
 });
