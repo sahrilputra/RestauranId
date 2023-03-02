@@ -5,13 +5,13 @@ class Navbar extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <button id="hamburgerBtn" type="button" aria-label="hamburger menu">
+    <button id="hamburgerBtn" type="button" aria-label="hamburger menu"  tabindex="3">
       <i id="hamburger" class="fa fa-bars"></i>
     </button>
     <div class="container" id="navbar" >
-    <a class="skipLink" href="#mainContent">Skip to content</a>
+    <a class="skipLink" tabindex="1" href="#mainContent">Skip to content</a>
     <nav class="nav">
-      <h1 class="nav__logo"  tabindex="0">Restaurant</h1>
+      <h1 class="nav__logo"  tabindex="2">Restaurant</h1>
       <ul class="nav__list" id="drawer" >
 
         <li class="nav__item"><a href="/">Home</a></li>
