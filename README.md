@@ -1,2 +1,2 @@
 # RestauranId
-![./RestoPreview.gif]{./preview/restoPreview.gif}
+![preview](/preview/RestoPreview.gif "preview")
