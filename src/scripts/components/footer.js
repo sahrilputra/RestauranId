@@ -8,6 +8,7 @@ class Footer extends HTMLElement {
     <footer>
     <p>Copyright © 2021 - Restaurant</p>
     <p>Sahril Putra</p>
+    <h1> HELLO WORLD </h1>
     </footer>
     `;
   }
